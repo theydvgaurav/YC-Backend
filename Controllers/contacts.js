@@ -18,7 +18,7 @@ addContact = async (req, res) => {
         author: req.user.id
     })
     newContact.save().then((data) => {
-        return res.send(data)
+        return res.send([data])
     })
         .catch(error => {
             return res.status(500).json(error)
